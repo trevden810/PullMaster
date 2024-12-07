@@ -7,12 +7,7 @@
 ## SavedVariablesPerCharacter: PullMasterCharDB
 
 # Libraries
-libs\LibStub\LibStub.lua
-libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
-libs\AceAddon-3.0\AceAddon-3.0.lua
-libs\AceConfig-3.0\AceConfig-3.0.lua
-libs\AceDB-3.0\AceDB-3.0.lua
-libs\AceGUI-3.0\AceGUI-3.0.lua
+libs\libs.xml
 
 # Core files
 core\init.lua
@@ -23,6 +18,14 @@ core\settings.lua
 modules\tactical_map.lua
 modules\boss_markers.lua
 modules\route_planner.lua
+modules\dungeons\dungeons.xml
+
+# Debug and Testing
+modules\debug\core.lua
+modules\debug\ui.lua
+modules\debug\commands.lua
+modules\performance_profiler.lua
+modules\test_reporter.lua
 
 # UI
 ui\main.lua
