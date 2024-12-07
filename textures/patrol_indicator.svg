@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <!-- Rotating Arrows -->
+    <g transform="rotate(0 16 16)">
+        <path d="M16 4C22.6274 4 28 9.37258 28 16C28 22.6274 22.6274 28 16 28" fill="none" stroke="#ffff00" stroke-width="2" stroke-dasharray="4 4">
+            <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="rotate"
+                from="0 16 16"
+                to="360 16 16"
+                dur="4s"
+                repeatCount="indefinite"/>
+        </path>
+    </g>
+</svg>
