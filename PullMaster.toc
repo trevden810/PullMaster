@@ -1,0 +1,29 @@
+## Interface: 11501
+## Title: PullMaster
+## Notes: Intelligent dungeon pull planning and boss strategies
+## Author: trevden810
+## Version: 1.0.0
+## SavedVariables: PullMasterDB
+## SavedVariablesPerCharacter: PullMasterCharDB
+
+# Libraries
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+libs\AceAddon-3.0\AceAddon-3.0.lua
+libs\AceConfig-3.0\AceConfig-3.0.lua
+libs\AceDB-3.0\AceDB-3.0.lua
+libs\AceGUI-3.0\AceGUI-3.0.lua
+
+# Core files
+core\init.lua
+core\config.lua
+core\settings.lua
+
+# Modules
+modules\tactical_map.lua
+modules\boss_markers.lua
+modules\route_planner.lua
+
+# UI
+ui\main.lua
+ui\settings.lua
