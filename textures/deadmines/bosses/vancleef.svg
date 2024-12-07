@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <!-- Base Boss Circle -->
+    <circle cx="32" cy="32" r="30" fill="#1a1a1a" stroke="#c41e3a" stroke-width="2"/>
+    
+    <!-- VanCleef Icon - Daggers -->
+    <g transform="translate(32,32) rotate(45)">
+        <rect x="-15" y="-2" width="30" height="4" fill="#c0c0c0"/>
+        <rect x="-2" y="-15" width="4" height="30" fill="#c0c0c0"/>
+    </g>
+    
+    <!-- Class Loot Indicators (Leather/Daggers) -->
+    <circle cx="16" cy="16" r="4" fill="#fff2e6" opacity="0.8"/>
+    <circle cx="48" cy="16" r="4" fill="#fff2e6" opacity="0.8"/>
+    
+    <!-- Animation Keyframes for Stealth Effect -->
+    <defs>
+        <radialGradient id="stealthGradient">
+            <stop offset="0%" stop-color="#c41e3a" stop-opacity="0.3"/>
+            <stop offset="100%" stop-color="#c41e3a" stop-opacity="0"/>
+        </radialGradient>
+        <animate xlink:href="#stealthEffect"
+                 attributeName="opacity"
+                 values="0.3;0;0.3"
+                 dur="2s"
+                 repeatCount="indefinite"/>
+    </defs>
+    
+    <!-- Stealth Effect Overlay -->
+    <circle id="stealthEffect"
+            cx="32" cy="32" r="28"
+            fill="url(#stealthGradient)"/>
+</svg>

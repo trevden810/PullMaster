@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <!-- Cart Base -->
+    <path d="M4 20h24v8H4z" fill="#4a4a4a"/>
+    
+    <!-- Wheels -->
+    <circle cx="8" cy="28" r="2" fill="#2a2a2a"/>
+    <circle cx="24" cy="28" r="2" fill="#2a2a2a"/>
+    
+    <!-- Warning Indicator -->
+    <path d="M16 4l8 14H8z" fill="#ffff00" opacity="0.8">
+        <animate attributeName="opacity"
+                 values="0.8;0.2;0.8"
+                 dur="1s"
+                 repeatCount="indefinite"/>
+    </path>
+</svg>
