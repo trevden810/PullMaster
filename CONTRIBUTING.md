@@ -1,57 +1,67 @@
 # Contributing to PullMaster
 
-Thank you for your interest in contributing to PullMaster! This guide will help you get started.
+Thank you for your interest in contributing to PullMaster! This guide will help you get started with contributing to this World of Warcraft Classic addon.
+
+## Table of Contents
+- [Code of Conduct](#code-of-conduct)
+- [Getting Started](#getting-started)
+- [Development Process](#development-process)
+- [Pull Request Process](#pull-request-process)
+- [Coding Standards](#coding-standards)
+- [Testing](#testing)
+
+## Code of Conduct
+This project and everyone participating in it is governed by our Code of Conduct. By participating, you are expected to uphold this code.
+
+## Getting Started
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/your-username/PullMaster.git`
+3. Add the original repo as upstream: `git remote add upstream https://github.com/trevden810/PullMaster.git`
+4. Create a new branch for your changes
 
 ## Development Process
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run tests (`/run PullMasterTest`)
-5. Commit your changes (`git commit -m 'Add amazing feature'`)
-6. Push to your branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
+### Branch Naming Convention
+- `feature/*` - New features
+- `bugfix/*` - Bug fixes
+- `dungeon/*` - New dungeon implementations
+- `docs/*` - Documentation updates
+- `test/*` - Test improvements
 
-## Branch Naming Convention
-
-- `feature/*` - For new features
-- `bugfix/*` - For bug fixes
-- `dungeon/*` - For new dungeon implementations
-- `test/*` - For test improvements
-- `docs/*` - For documentation updates
-
-## Commit Message Guidelines
-
+### Commit Messages
 - Use the present tense ("Add feature" not "Added feature")
 - Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
-- Limit the first line to 72 characters
 - Reference issues and pull requests in the commit body
 
-## Adding New Dungeons
-
-1. Create a new branch using `dungeon/dungeon-name`
-2. Follow the Deadmines template in `dungeons/deadmines`
-3. Implement required components:
+### Adding a New Dungeon
+1. Create a branch using the convention `dungeon/dungeon-name`
+2. Follow the Deadmines template in `dungeons/deadmines/`
+3. Implement all required components:
    - Patrol paths
    - Boss data
    - Safe spots
    - Tactical routing
-4. Add tests following `tests/deadmines_test.lua`
+4. Add corresponding tests
 5. Update documentation
 
-## Testing
+## Pull Request Process
+1. Update the README.md with details of changes if needed
+2. Add/update tests for any new functionality
+3. Ensure all tests pass
+4. Update documentation as needed
+5. Follow the pull request template
 
-- All new features must include tests
-- Run the full test suite before submitting PRs
-- Document any new test dependencies
-
-## Code Style
-
-- Follow existing LUA code style
+## Coding Standards
+- Follow existing LUA style in the codebase
 - Use WoW Classic API conventions
 - Comment complex logic
 - Keep functions focused and minimal
 
-## Questions?
+## Testing
+- All new features must include tests
+- Run the full test suite before submitting PRs
+- Follow the test naming conventions in existing tests
+- Document any new test dependencies
 
-Open an issue for any questions about contributing!
+## Questions?
+Open an issue or join our Discord server for help!
