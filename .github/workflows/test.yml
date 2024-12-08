@@ -1,0 +1,58 @@
+name: Test and Lint
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup Lua
+      uses: leafo/gh-actions-lua@v8
+      with:
+        luaVersion: "5.1"
+
+    - name: Setup Luarocks
+      uses: leafo/gh-actions-luarocks@v4
+
+    - name: Install dependencies
+      run: |
+        luarocks install luacheck
+        luarocks install busted
+        luarocks install luacov
+        luarocks install luafilesystem
+
+    - name: Validate TOC
+      run: |
+        lua -e '
+          local f = io.open("PullMaster.toc", "r")
+          local content = f:read("*all")
+          f:close()
+          assert(content:match("## Interface:"), "Missing Interface version")
+          assert(content:match("## Version:"), "Missing Version")
+          assert(content:match("## Title:"), "Missing Title")
+        '
+
+    - name: Lint
+      run: luacheck .
+
+    - name: Unit Tests
+      run: busted -c
+
+    - name: Check package structure
+      run: |
+        test -d "src" || (echo "Missing src directory" && exit 1)
+        test -f "PullMaster.toc" || (echo "Missing TOC file" && exit 1)
+        test -f ".pkgmeta" || (echo "Missing pkgmeta file" && exit 1)
+
+    - name: Upload coverage
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage
+        path: luacov.report.out
