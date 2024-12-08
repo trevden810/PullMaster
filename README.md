@@ -1,25 +1,20 @@
 # PullMaster
 
-A World of Warcraft Classic addon for intelligent dungeon pull planning and boss strategies.
-
-## Features
-
-- Intelligent pull planning
-- Boss strategy visualization
-- Class-specific recommendations
-- Route optimization
-- Performance monitoring
+A World of Warcraft Classic addon for intelligent dungeon pull planning.
 
 ## Installation
 
-1. Download the latest release
-2. Extract to your WoW Classic AddOns folder
-3. Restart WoW Classic
+1. Download the latest release ZIP file
+2. Extract to `World of Warcraft\_classic_era_\Interface\AddOns\`
+3. Restart WoW if it's running
 
-## Usage
+## Features
 
-Type `/pm` or `/pullmaster` to open the main interface.
+- Patrol tracking
+- Route planning
+- Boss markers
+- Deadmines implementation
 
-## Contributing
+## Testing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Currently in beta - basic functionality available for testing.
