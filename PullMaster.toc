@@ -1,32 +1,17 @@
-## Interface: 11501
+## Interface: 11404
+## Version: @project-version@
 ## Title: PullMaster
-## Notes: Intelligent dungeon pull planning and boss strategies
+## Notes: Intelligent dungeon pull planning for Classic WoW
 ## Author: trevden810
-## Version: 1.0.0
 ## SavedVariables: PullMasterDB
-## SavedVariablesPerCharacter: PullMasterCharDB
+## OptionalDeps: LibStub, CallbackHandler-1.0
 
 # Libraries
-libs\libs.xml
+libs\LibStub\LibStub.lua
+libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 
 # Core files
-core\init.lua
-core\config.lua
-core\settings.lua
-
-# Modules
-modules\tactical_map.lua
-modules\boss_markers.lua
-modules\route_planner.lua
-modules\dungeons\dungeons.xml
-
-# Debug and Testing
-modules\debug\core.lua
-modules\debug\ui.lua
-modules\debug\commands.lua
-modules\performance_profiler.lua
-modules\test_reporter.lua
-
-# UI
-ui\main.lua
-ui\settings.lua
+src\core.lua
+src\patrols.lua
+src\routes.lua
+src\ui.lua
